@@ -1,9 +1,6 @@
 <?php
-
 namespace $NAMESPACE$;
-
 use Illuminate\View\Component;
-
 class $CLASS$ extends Component
 {
     /**

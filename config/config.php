@@ -37,13 +37,13 @@ return [
             'composer' => 'composer.json',
             'assets/js/app' => 'Resources/assets/js/app.js',
             'assets/sass/app' => 'Resources/assets/sass/app.scss',
-            'vite' => 'vite.config.js',
+            'webpack' => 'webpack.mix.js',
             'package' => 'package.json',
         ],
         'replacements' => [
             'routes/web' => ['LOWER_NAME', 'STUDLY_NAME'],
             'routes/api' => ['LOWER_NAME'],
-            'vite' => ['LOWER_NAME'],
+            'webpack' => ['LOWER_NAME'],
             'json' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE', 'PROVIDER_NAMESPACE'],
             'views/index' => ['LOWER_NAME'],
             'views/master' => ['LOWER_NAME', 'STUDLY_NAME'],
@@ -166,7 +166,6 @@ return [
         Commands\RequestMakeCommand::class,
         Commands\RuleMakeCommand::class,
         Commands\MigrateCommand::class,
-        Commands\MigrateFreshCommand::class,
         Commands\MigrateRefreshCommand::class,
         Commands\MigrateResetCommand::class,
         Commands\MigrateRollbackCommand::class,
@@ -186,6 +185,8 @@ return [
         Commands\ResourceMakeCommand::class,
         Commands\TestMakeCommand::class,
         Commands\LaravelModulesV6Migrator::class,
+        Commands\ComponentClassMakeCommand::class,
+        Commands\ComponentViewMakeCommand::class,
     ],
 
     /*
@@ -232,7 +233,6 @@ return [
     */
     'cache' => [
         'enabled' => false,
-        'driver' => 'file',
         'key' => 'laravel-modules',
         'lifetime' => 60,
     ],

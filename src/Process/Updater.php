@@ -78,7 +78,6 @@ class Updater extends Runner
         foreach ($scripts as $key => $script) {
             if (array_key_exists($key, $composer['scripts'])) {
                 $composer['scripts'][$key] = array_unique(array_merge($composer['scripts'][$key], $script));
-
                 continue;
             }
             $composer['scripts'] = array_merge($composer['scripts'], [$key => $script]);

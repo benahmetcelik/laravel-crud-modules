@@ -4,61 +4,6 @@ All Notable changes to `laravel-modules` will be documented in this file.
 
 ## Next
 
-## 9.0.7 - 2022-11-17
-
-## Added
-
-- [@alissn](https://github.com/alissn) implement command check lang folder, and show missing files [#1496](https://github.com/nWidart/laravel-modules/pull/1496)
-- [@kmizzi](https://github.com/kmizzi) Use AsCommand in lieu of defaultName for ModelShowCommand [#1503](https://github.com/nWidart/laravel-modules/pull/1503)
-
-## 9.0.6 - 2022-10-28
-
-## Added
-
-- [@wikigods](https://github.com/wikigods) added vite compatibility [#1455](https://github.com/nWidart/laravel-modules/pull/1455)
-- [@WMOH-DEV](https://github.com/WMOH-DEV) Adding migrate fresh command [#1483](https://github.com/nWidart/laravel-modules/pull/1483)
-
-## 9.0.5 - 2022-08-31
-
-## Added
-
-- [@alissn](https://github.com/alissn) add command show model information [#1429](https://github.com/nWidart/laravel-modules/pull/1429) 
-- [@JaberWiki](https://github.com/JaberWiki) add optional flag for seeder or request in model generator command [#1431](https://github.com/nWidart/laravel-modules/pull/1431)
-
-## Changed
-- [@alissn](https://github.com/alissn) updated command style to new version of artisan [#1430](https://github.com/nWidart/laravel-modules/pull/1430)
-- [@ChauDucGiang](https://github.com/ChauDucGiang) updated Feature/cache driver [#1443](https://github.com/nWidart/laravel-modules/pull/1443) 
-
-### Fixed
-
-- [@ajayfroiden](https://github.com/alissn) fixed module:disable [#1438](https://github.com/nWidart/laravel-modules/pull/1438)
-- [@inovar-tecnologia](https://github.com/inovar-tecnologia) fixed DisableCommand.php[#1435](https://github.com/nWidart/laravel-modules/pull/1435)
-
-## 9.0.4 - 2022-07-28
-
-- 9.02 - 9.0.3 have been removed due to savere performance problems
-
-
-## 9.0.1 - 2022-02-28
-
-### Added 
-
-- Added option to publish stubs for modules `php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider" --tag="stubs"`
-
-### Changed
-
-- [@iamine](https://github.com/iamine) Added Anonymous migration class as default like in Laravel 9.0 [#1363](https://github.com/nWidart/laravel-modules/pull/1363)
-
-## 9.0 - 2022-02-10
-
-### Changed
-
-- Minimum PHP version to 8.0 for supporting Laravel 9
-- Laravel 9 version
-- Increased PHPUnit to 9.5
-- Increased Mockery to 1.4
-- Fixed test replaced expectsEvents with event fakes
-
 ## 8.3 - 2022-02-10
 
 ### Fixed
@@ -77,7 +22,7 @@ All Notable changes to `laravel-modules` will be documented in this file.
 
 ### Added 
 
-- Added commands make class component and make view component
+- Added comands make class component and make view component
 - Test against php 8.0
 - Merge config in register method
 - Added optional controller flag to model generator command
@@ -85,6 +30,7 @@ All Notable changes to `laravel-modules` will be documented in this file.
 - Added tests for generating controller in model generator command
 - Added test for check if migration and controller flag are both present
 - Laravel mix v6 support
+
 
 ## 8.2 - 2020-11-11
 

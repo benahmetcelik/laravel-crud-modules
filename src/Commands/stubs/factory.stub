@@ -1,5 +1,4 @@
 <?php
-
 namespace $NAMESPACE$;
 
 use Illuminate\Database\Eloquent\Factories\Factory;

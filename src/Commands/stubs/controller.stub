@@ -5,75 +5,133 @@ namespace $CLASS_NAMESPACE$;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-
+use Crud\Traits\BaseCrud;
 class $CLASS$ extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     * @return Renderable
-     */
+
+
+       use BaseCrud;
+
+    public function __construct()
+    {
+        $this->base_dir = 'backend.pages.';
+        $this->base_model = 'Modules\$MODULENAME$\Entities\$MODULENAME$';
+        $this->base_resource = 'backend.$LOWER_NAME$.';
+        $this->tableColumns = [];
+        $this->formInputs = [];
+        $this->tableActions = [
+            'edit' => [
+                'type' => 'link',
+                'route' => 'backend.$LOWER_NAME$.edit',
+                'icon' => 'fa fa-edit',
+                'class' => 'btn btn-primary btn-sm',
+            ],
+            'delete' => [
+                'type' => 'form',
+                'method' => 'delete',
+                'route' => 'backend.$LOWER_NAME$.destroy',
+                'icon' => 'fa fa-trash',
+                'class' => 'btn btn-danger btn-sm',
+            ],
+            'show' => [
+                'type' => 'link',
+
+                'route' => 'backend.$LOWER_NAME$.show',
+                'icon' => 'fa fa-eye',
+                'class' => 'btn btn-success btn-sm',
+            ],
+        ];
+
+        $this->formDetails = [
+            'create' => [
+                'title' => translate('backend','Create').' $MODULENAME$',
+                'action' => route('backend.$LOWER_NAME$.store'),
+                'method' => 'POST',
+                'submit' => translate('backend','Create'),
+                'formName' => 'create',
+                'formCancelText' => translate('backend','Cancel'),
+                'formCancelRoute' => route('backend.$LOWER_NAME$.index'),
+                'formCancelClass' => 'btn btn-danger',
+                'formSubmitClass' => 'btn btn-primary',
+                'formSubmitIcon' => 'fa fa-save',
+                'formCancelIcon' => 'fa fa-times',
+                'formTitleIcon' => 'fa fa-plus',
+                'formTitleClass' => 'text-primary',
+                'formClass' => 'form-horizontal',
+                'formId' => 'form',
+                'formEnctype' => 'multipart/form-data',
+            ],
+            'edit' => [
+                'formName' => 'edit',
+                'title' => translate('backend','Edit').' $MODULENAME$',
+                'action' => route('backend.$LOWER_NAME$.update', 1),
+                'method' => 'put',
+                'submit' => translate('backend','Update'),
+                'cancel' => translate('backend','Cancel'),
+                'formCancelText' => translate('backend','Cancel'),
+                'formCancelRoute' => route('backend.$LOWER_NAME$.index'),
+
+                'formCancelClass' => 'btn btn-danger',
+                'formSubmitClass' => 'btn btn-primary',
+                'formSubmitIcon' => 'fa fa-save',
+                'formCancelIcon' => 'fa fa-times',
+                'formTitleIcon' => 'fa fa-edit',
+                'formTitleClass' => 'text-primary',
+                'formClass' => 'form-horizontal',
+                'formId' => 'form',
+                'formEnctype' => 'multipart/form-data',
+            ],
+            'show' => [
+                'formName' => 'create',
+                'title' => translate('backend','Show').' $MODULENAME$',
+                'action' => route('backend.$LOWER_NAME$.update', 1),
+                'method' => 'put',
+                'submit' => 'Update',
+                'cancel' => translate('backend','Cancel'),
+                'formCancelText' => translate('backend','Cancel'),
+                'formCancelRoute' => route('backend.$LOWER_NAME$.index'),
+                'formCancelClass' => 'btn btn-danger',
+                'formSubmitClass' => 'btn btn-primary',
+                'formSubmitIcon' => 'fa fa-save',
+                'formCancelIcon' => 'fa fa-times',
+                'formTitleIcon' => 'fa fa-edit',
+                'formTitleClass' => 'text-primary',
+                'formClass' => 'form-horizontal',
+                'formId' => 'form',
+                'formEnctype' => 'multipart/form-data',
+            ],
+        ];
+
+    }
+       /*
+
     public function index()
     {
         return view('$LOWER_NAME$::index');
     }
-
-    /**
-     * Show the form for creating a new resource.
-     * @return Renderable
-     */
     public function create()
     {
         return view('$LOWER_NAME$::create');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     * @param Request $request
-     * @return Renderable
-     */
     public function store(Request $request)
     {
         //
     }
-
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
     public function show($id)
     {
         return view('$LOWER_NAME$::show');
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
     public function edit($id)
     {
         return view('$LOWER_NAME$::edit');
     }
-
-    /**
-     * Update the specified resource in storage.
-     * @param Request $request
-     * @param int $id
-     * @return Renderable
-     */
     public function update(Request $request, $id)
     {
         //
     }
-
-    /**
-     * Remove the specified resource from storage.
-     * @param int $id
-     * @return Renderable
-     */
     public function destroy($id)
     {
         //
     }
+    */
 }

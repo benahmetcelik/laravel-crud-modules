@@ -11,6 +11,23 @@
 |
 */
 
-Route::prefix('$LOWER_NAME$')->group(function() {
+
+Route::group(['prefix'=>'/panel','as' => 'backend.','middleware'=>['auth']], function () {
+    Route::resource('$ROUTE_NAME$', '$STUDLY_NAME$Controller');
+});
+
+
+Route::group(['prefix'=>'/$ROUTE_NAME$', 'as' => 'frontend.$ROUTE_NAME$.'], function () {
+    Route::get('/', '$STUDLY_NAME$Controller@front')->name('front');
+    Route::get('/{slug}', '$STUDLY_NAME$Controller@detail')->name('detail');
+
+
+});
+
+
+
+/*
+Route::prefix('$ROUTE_NAME$')->group(function() {
     Route::get('/', '$STUDLY_NAME$Controller@index');
 });
+*/

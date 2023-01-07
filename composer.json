@@ -1,12 +1,13 @@
 {
-  "name": "nwidart/laravel-modules",
-  "description": "Laravel Module management",
+  "name": "benahmetcelik/laravel-crud-modules",
+  "description": "Laravel Module management And CRUD Generator",
   "keywords": [
     "modules",
     "laravel",
     "nwidart",
     "module",
-    "rad"
+    "rad",
+    "crud"
   ],
   "license": "MIT",
   "authors": [
@@ -15,6 +16,12 @@
       "email": "n.widart@gmail.com",
       "homepage": "https://nicolaswidart.com",
       "role": "Developer"
+    },
+    {
+      "name": "Ben Ahmet Celik",
+      "email": "ben4hmetcelik@gmail.com",
+        "homepage": "https://github.com/benahmetcelik",
+        "role": "Developer"
     }
   ],
   "require": {

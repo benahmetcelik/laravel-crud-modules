@@ -1,0 +1,23 @@
+{
+    "name": "benahmetcelik/module",
+    "description": "",
+    "authors": [
+        {
+            "name": "Ahmet CELIK",
+            "email": "ben4hmetcelik@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Module\\": ""
+        }
+    }
+}

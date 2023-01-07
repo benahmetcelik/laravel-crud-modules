@@ -1,0 +1,14 @@
+{
+    "name": "Module",
+    "alias": "module",
+    "icon": "fas fa-cubes",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Module\\Providers\\ModuleServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

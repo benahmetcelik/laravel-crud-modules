@@ -29,7 +29,8 @@
     "laravel/framework": "^9.21",
     "spatie/phpunit-snapshot-assertions": "^4.2",
     "phpstan/phpstan": "^1.4",
-    "benahmetcelik/laravel-crud": "^1.4"
+    "benahmetcelik/laravel-crud": "*",
+    "benahmetcelik/laravel-crud-generator-module": "*"
   },
   "autoload": {
     "psr-4": {

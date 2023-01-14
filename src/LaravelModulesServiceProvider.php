@@ -25,37 +25,9 @@ class LaravelModulesServiceProvider extends ModulesServiceProvider
         $this->registerServices();
         $this->setupStubPath();
         $this->registerProviders();
-        $this->copyModule(__DIR__.'/Module',base_path('Modules'));
+
         $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'modules');
     }
-
-    /**
-     * @param $source
-     * @param $to
-     * @return void
-     * Copy Base Modules
-     */
-    public function copyModule($source, $to) {
-        if ( is_dir( $source ) ) {
-            if (!file_exists($to)) { @mkdir( $to ); }
-            $dir = dir( $source );
-            while ( FALSE !== ( $section = $dir->read() ) ) {
-                if ( $section == '.' || $section == '..' ) {
-                    continue;
-                }
-                $Giris = $source . '/' . $section;
-                if ( is_dir( $Giris ) ) {
-                    $this->copyModule( $Giris, $to . '/' . $section );
-                    continue;
-                }
-                copy( $Giris, $to . '/' . $section );
-            }
-            $dir->close();
-        }else {
-            copy( $source, $to );
-        }
-    }
-
 
     /**
      * Setup stub path.
